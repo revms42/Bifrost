@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -72,4 +73,27 @@ public class FilterGroup implements CodexFilter {
 		return findFilter(p) != null;
 	}
 
+	@Override
+	public int hashCode() {
+		int code = 0;
+		for(CodexFilter filter : getFilters().stream().sorted((o1, o2) -> o1.hashCode() - o2.hashCode()).collect(Collectors.toList())) {
+			code = filter.hashCode() ^ code;
+		}
+		
+		return code;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(FilterGroup.class.isAssignableFrom(o.getClass())) {
+			HashSet<CodexFilter> union = new HashSet<>();
+			union.addAll(getFilters());
+			union.addAll(((FilterGroup) o).getFilters());
+			
+			return union.size() == getFilters().size() &&
+					union.size() == ((FilterGroup) o).getFilters().size();
+		} else {
+			return super.equals(o);
+		}
+	}
 }

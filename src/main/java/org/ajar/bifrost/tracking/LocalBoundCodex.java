@@ -1,6 +1,7 @@
 package org.ajar.bifrost.tracking;
 
-import javax.xml.bind.annotation.XmlAttribute;
+import java.io.File;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -16,8 +17,16 @@ public class LocalBoundCodex extends LocalFileCodex implements UsageBinding {
 	private Source source;
 	private CodexFilter filter;
 	
+	public LocalBoundCodex() {
+		super();
+	}
+	
+	public LocalBoundCodex(String string, File folder, long startVersion) {
+		super(string, folder, startVersion);
+	}
+
 	@Override
-	@XmlAttribute(name = "source")
+	@XmlElement(name = "source")
 	public Source getRemoteLocation() {
 		return source;
 	}

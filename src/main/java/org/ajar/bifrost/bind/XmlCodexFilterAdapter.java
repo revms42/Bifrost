@@ -33,7 +33,7 @@ public class XmlCodexFilterAdapter extends XmlAdapter<XmlCodexFilterAdapter.XmlC
 			this.path = path;
 		}
 		
-		@XmlElement
+		@XmlElement(name = "entry")
 		public List<XmlCodexFilter> getFilters() {
 			return filters;
 		}
@@ -62,7 +62,7 @@ public class XmlCodexFilterAdapter extends XmlAdapter<XmlCodexFilterAdapter.XmlC
 		} else if(v instanceof FilterGroup) {
 			xmlFilter.setFilter(
 					((FilterGroup) v).getFilters().stream().map(
-							filter -> marshal(v)
+							filter -> marshal(filter)
 					).collect(Collectors.toList())
 			);
 		} else {
