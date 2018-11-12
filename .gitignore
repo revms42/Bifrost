@@ -28,3 +28,8 @@ hs_err_pid*
 .settings/
 bin/
 build/
+
+#IDEA project files
+.gradle/
+.idea/
+*.iml
