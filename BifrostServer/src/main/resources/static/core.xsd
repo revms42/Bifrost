@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://bifrost.ajar.org/core" xmlns:tns="http://bifrost.ajar.org/core" elementFormDefault="qualified">
+
+    <attribute name="name" type="string"></attribute>
+
+    <attribute name="version">
+        <simpleType>
+    		<restriction base="long">
+    			<minInclusive value="0"></minInclusive>
+    		</restriction>
+    	</simpleType>
+    </attribute>
+
+    <attribute name="active" type="boolean"></attribute>
+
+    <attribute name="location" type="string"></attribute>
+    
+    <attribute name="page">
+    	<simpleType>
+    		<restriction base="int">
+    			<minInclusive value="0"></minInclusive>
+    		</restriction>
+    	</simpleType>
+    </attribute>
+    
+    <attribute name="pageSize">
+    	<simpleType>
+    		<restriction base="int">
+    			<minInclusive value="1"></minInclusive>
+    		</restriction>
+    	</simpleType>
+    </attribute>
+
+    <complexType name="MappedFileType" abstract="true">
+    	<attribute ref="tns:name"></attribute>
+    	<attribute ref="tns:version"></attribute>
+    	<attribute ref="tns:location" use="optional"></attribute>
+    </complexType>
+    
+    <element name="mapped" type="tns:MappedFileType"></element>
+	<element name="local" type="tns:MappedFileType" substitutionGroup="tns:mapped"></element>
+	<element name="stored" type="tns:MappedFileType" substitutionGroup="tns:mapped"></element>
+
+    <complexType name="MappedPackageType" abstract="true">
+    	<sequence>
+    		<element ref="tns:mapped" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    	<attribute ref="tns:name"></attribute>
+    	<attribute ref="tns:version"></attribute>
+    </complexType>
+
+    <complexType name="LocalMappingType">
+    	<complexContent>
+    		<restriction base="tns:MappedPackageType">
+    		    <sequence maxOccurs="1" minOccurs="1">
+		    		<element ref="tns:local"></element>
+		    	</sequence>
+		    	<attribute ref="tns:name"></attribute>
+		    	<attribute ref="tns:version"></attribute>
+    		</restriction>
+    	</complexContent>
+    </complexType>
+    
+    <complexType name="StoredMappingType">
+    	<complexContent>
+    		<restriction base="tns:MappedPackageType">
+    		    <sequence maxOccurs="1" minOccurs="1">
+		    		<element ref="tns:stored"></element>
+		    	</sequence>
+		    	<attribute ref="tns:name"></attribute>
+		    	<attribute ref="tns:version"></attribute>
+    		</restriction>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="RegisteredPackageType">
+    	<attribute ref="tns:location"></attribute>
+    	<attribute ref="tns:name"></attribute>
+    	<attribute ref="tns:version"></attribute>
+    	<attribute ref="tns:active"></attribute>
+    </complexType>
+
+    <complexType name="PackageSummaryType">
+    	<attribute ref="tns:name"></attribute>
+    	<attribute ref="tns:active"></attribute>
+    </complexType>
+
+    <complexType name="PackageListRequestType">
+    	<attribute ref="tns:page"></attribute>
+    	<attribute ref="tns:pageSize"></attribute>
+    </complexType>
+    
+    <complexType name="PackageListResponseType">
+    	<sequence maxOccurs="1" minOccurs="1">
+    		<element name="package" type="tns:PackageSummaryType" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    	<attribute ref="tns:page"></attribute>
+    </complexType>
+
+    <element name="list-request" type="tns:PackageListRequestType"></element>
+
+    <element name="list-response" type="tns:PackageListResponseType"></element>
+
+    <complexType name="RegisterPackageRequestType">
+    	<attribute ref="tns:name"></attribute>
+    	<attribute ref="tns:location"></attribute>
+    </complexType>
+
+    <element name="register-package" type="tns:RegisterPackageRequestType"></element>
+
+    <element name="package-response" type="tns:RegisteredPackageType"></element>
+
+    <element name="package-request" type="string"></element>
+</schema>
