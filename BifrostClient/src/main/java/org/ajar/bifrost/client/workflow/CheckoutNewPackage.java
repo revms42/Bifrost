@@ -33,6 +33,9 @@ import org.ajar.bifrost.core.model.data.StoredMapping;
  * > You checkout the game you want, passing in your port.
  * x You play some game w-^_^-w
  * >> You continue as if you'd updated in scenario 1.
+ * 
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
  */
 
 public abstract class CheckoutNewPackage extends AbstractCheckoutWorkflow {

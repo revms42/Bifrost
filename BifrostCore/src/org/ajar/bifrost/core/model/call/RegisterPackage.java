@@ -7,8 +7,9 @@ import com.google.api.client.util.Key;
  * To checkin you call post passing this, where location is the url it's stored.
  * To add a new package you call post as well.
  * To delete you call delete with this, location not needed.
+ * 
  * @author revms42
- *
+ * @since 0.0.1-SNAPSHOT
  */
 public class RegisterPackage {
 	

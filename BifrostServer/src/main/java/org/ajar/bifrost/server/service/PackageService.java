@@ -10,6 +10,10 @@ import org.ajar.bifrost.server.model.RegisteredPackageEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 @Service
 public class PackageService {
 	

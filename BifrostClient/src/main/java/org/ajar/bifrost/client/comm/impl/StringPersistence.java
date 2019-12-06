@@ -12,6 +12,10 @@ import javax.naming.OperationNotSupportedException;
 import org.ajar.bifrost.client.comm.PersistenceClient;
 import org.ajar.bifrost.client.comm.ResourceNotAvailableException;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class StringPersistence implements PersistenceClient {
 
 	public static final String PROTOCOL_PREFIX = "string://";

@@ -5,6 +5,10 @@ import java.util.List;
 
 import org.ajar.bifrost.core.model.data.LocalFile;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public interface CreateWorkflow extends HeimdallWorkflow{
 
 	public String askForName();

@@ -11,6 +11,10 @@ import org.ajar.bifrost.client.ui.JsonFileFilter;
 import org.ajar.bifrost.client.workflow.AbstractCreateWorkflow;
 import org.ajar.bifrost.core.model.data.LocalFile;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class CreateNewUI extends AbstractCreateWorkflow {
 
 	private final static JFileChooser chooser = HeimdallBifrostClient.chooser;

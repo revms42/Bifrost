@@ -10,6 +10,10 @@ import javax.naming.OperationNotSupportedException;
 import org.ajar.bifrost.core.model.data.StoredFile;
 import org.ajar.bifrost.core.model.data.StoredMapping;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class StoredMappingPersistenceWrapper implements PersistenceMappingWrapper<StoredFile, StoredMapping> {
 	
 	private final PersistenceClient client;

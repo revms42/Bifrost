@@ -30,6 +30,9 @@ import org.ajar.bifrost.core.model.data.RegisteredPackage;
  * - You persist the updated StoredMapping into remote storage. (updateRemoteStoredMapping)
  * - You let the server know that you've checked in the RegisteredPackage with it's location. (checkinPackage)
  * - You correct any version problem on the server based on your in-memory version of the StoredMapping. (checkinPackage
+ *
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
  */
 public abstract class CheckinExistingPackage extends AbstractCheckinWorkflow {
 

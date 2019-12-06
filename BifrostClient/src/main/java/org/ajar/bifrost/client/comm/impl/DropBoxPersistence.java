@@ -18,6 +18,10 @@ import com.dropbox.core.v2.files.DownloadErrorException;
 import com.dropbox.core.v2.files.UploadUploader;
 import com.dropbox.core.v2.files.WriteMode;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class DropBoxPersistence implements PersistenceClient {
 
 	private static final String ACCESS_TOKEN_KEY = "dropbox.token";

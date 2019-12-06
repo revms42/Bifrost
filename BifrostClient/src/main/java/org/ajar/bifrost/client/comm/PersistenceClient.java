@@ -8,6 +8,10 @@ import java.util.List;
 
 import javax.naming.OperationNotSupportedException;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public interface PersistenceClient {
 	
 	public boolean canHandle(String location);

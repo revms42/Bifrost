@@ -11,6 +11,10 @@ import javax.swing.BorderFactory;
 import javax.swing.ListCellRenderer;
 import javax.swing.JLabel;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class MappingListCellRenderer extends JLabel implements ListCellRenderer<MappingElement> {
 	
 	private static final long serialVersionUID = 1479740798066542287L;

@@ -11,6 +11,10 @@ import javax.swing.ListSelectionModel;
 import org.ajar.bifrost.client.MappedFileOperations;
 import org.ajar.bifrost.client.comm.PersistenceClient;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class MappingSelectionDialog {
 
 	private static class RegisteredClientElement {

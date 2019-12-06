@@ -12,6 +12,10 @@ import org.ajar.bifrost.client.comm.impl.FileSystemPersistence;
 import org.ajar.bifrost.core.model.data.LocalFile;
 import org.ajar.bifrost.core.model.data.LocalMapping;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class ChangeMonitor extends Monitor {
 
 	private final List<File> changed;

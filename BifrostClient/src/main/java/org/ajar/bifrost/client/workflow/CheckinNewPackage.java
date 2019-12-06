@@ -30,6 +30,9 @@ import static java.util.stream.Collectors.toMap;
  * - You call the wrapper to persist the mapping to the stored location. (updateRemoteStoredMapping)
  * - You register the new content in the server. (checkinPackage)
  * - You save the existing BifrostMappingInventory. (saveMappingInventory)
+ * 
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
  */
 public abstract class CheckinNewPackage extends AbstractCheckinWorkflow {
 

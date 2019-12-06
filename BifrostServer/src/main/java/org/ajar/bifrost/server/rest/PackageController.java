@@ -24,6 +24,10 @@ import javax.servlet.http.HttpServletRequest;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 @RestController
 public class PackageController implements BifrostPathConst {
 	

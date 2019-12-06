@@ -21,6 +21,10 @@ import com.google.api.client.http.HttpResponse;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class BifrostHttpClient implements BifrostClient {
 	
 	private final static BifrostHttpClient singleton;

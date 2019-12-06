@@ -20,6 +20,10 @@ import org.ajar.bifrost.client.model.BifrostMapping;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class MappedFileOperations {
 	
 	private static final Set<PersistenceClient> clients;

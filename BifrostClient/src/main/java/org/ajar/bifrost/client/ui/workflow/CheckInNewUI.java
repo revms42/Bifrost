@@ -11,6 +11,10 @@ import org.ajar.bifrost.client.model.BifrostPersistenceWrapper;
 import org.ajar.bifrost.client.workflow.CheckinNewPackage;
 import org.ajar.bifrost.core.model.data.LocalFile;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class CheckInNewUI extends CheckinNewPackage {
 	
 	private final static Pattern stripper = Pattern.compile("(.+//|/).+");

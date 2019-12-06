@@ -20,6 +20,10 @@ import org.ajar.bifrost.core.model.data.LocalMapping;
 import org.ajar.bifrost.core.model.data.StoredFile;
 import org.ajar.bifrost.core.model.data.StoredMapping;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class BifrostPersistenceWrapper implements BifrostMapping {
 
 	private final BifrostMapping mapping;

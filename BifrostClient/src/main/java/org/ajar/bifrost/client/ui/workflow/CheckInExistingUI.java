@@ -7,6 +7,10 @@ import org.ajar.bifrost.client.model.BifrostPersistenceWrapper;
 import org.ajar.bifrost.client.workflow.CheckinExistingPackage;
 import org.ajar.bifrost.core.model.data.LocalFile;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class CheckInExistingUI extends CheckinExistingPackage {
 
 	public CheckInExistingUI(BifrostPersistenceWrapper wrapper) {

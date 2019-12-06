@@ -36,6 +36,10 @@ import org.ajar.bifrost.core.model.data.StoredMapping;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class MappingElementDetail extends JPanel implements ListSelectionListener {
 	private static final long serialVersionUID = 100657251051473002L;
 

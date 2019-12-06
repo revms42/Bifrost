@@ -17,6 +17,10 @@ import org.ajar.bifrost.core.model.call.PackageListRequest;
 import org.ajar.bifrost.core.model.call.RegisterPackage;
 import org.ajar.bifrost.server.service.PackageRepository;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -24,7 +28,7 @@ class BifrostServerApplicationTests {
 
 	private final String[] tests = {"test1", "test2", "test3"};
 	private final String[] locations = {"http://mystorage/test1.xml", "http://mystorage/test2.xml", "http://mystorage/test3.xml"};
-	private final String[] actives = {"192.168.0.1", "192.168.0.2", "192.168.0.3"};
+	private final String[] actives = {"8080", "1234", "508080"};
 	
     @Autowired
     private MockMvc mockMvc;
@@ -46,7 +50,7 @@ class BifrostServerApplicationTests {
         this.mockMvc.perform(get("/query/register").param("name", tests[0]).param("location", actives[0]))
 			.andExpect(jsonPath("name").value(tests[0]))
 			.andExpect(jsonPath("version").value("1"))
-			.andExpect(jsonPath("location").value(actives[0]))
+			.andExpect(jsonPath("location").value("127.0.0.1:" + actives[0]))
 			.andExpect(jsonPath("active").value("true"));
         
         this.mockMvc.perform(get("/query/update").param("name", tests[0]).param("location", locations[0]))
@@ -110,7 +114,7 @@ class BifrostServerApplicationTests {
         this.mockMvc.perform(get("/register").content(gson.toJson(new RegisterPackage(tests[0], actives[0]))))
 			.andExpect(jsonPath("name").value(tests[0]))
 			.andExpect(jsonPath("version").value("1"))
-			.andExpect(jsonPath("location").value(actives[0]))
+			.andExpect(jsonPath("location").value("127.0.0.1:" + actives[0]))
 			.andExpect(jsonPath("active").value("true"));
         
         this.mockMvc.perform(get("/update").content(gson.toJson(new RegisterPackage(tests[0], locations[0]))))

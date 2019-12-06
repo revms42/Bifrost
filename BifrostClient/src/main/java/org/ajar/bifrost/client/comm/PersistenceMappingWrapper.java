@@ -9,6 +9,10 @@ import org.ajar.bifrost.core.model.data.MappingPackage;
 
 import com.google.gson.Gson;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public interface PersistenceMappingWrapper<F extends MappedFile, T extends MappingPackage<F>> {
 	
 	public static Gson gson = new Gson();

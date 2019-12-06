@@ -3,6 +3,10 @@ package org.ajar.bifrost.client.monitor;
 import java.io.File;
 import java.util.Map;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class Monitor {
 
 	public static final String MONITOR_KEY = "monitor.dir";

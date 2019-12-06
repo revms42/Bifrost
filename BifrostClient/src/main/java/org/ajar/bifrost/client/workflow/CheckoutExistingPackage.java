@@ -18,6 +18,9 @@ import org.ajar.bifrost.core.model.data.RegisteredPackage;
  * > You find a place for any new stored files to live.
  * > You update the version of your stored mapping.
  * - You start monitoring the locations for your selected mapping. (startMonitor)
+ * 
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
  */
 public abstract class CheckoutExistingPackage extends AbstractCheckoutWorkflow {
 	

@@ -4,6 +4,10 @@ import java.io.File;
 
 import javax.swing.filechooser.FileFilter;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class PropertiesFileFilter extends FileFilter {
 	
 	public static final PropertiesFileFilter singleton = new PropertiesFileFilter();

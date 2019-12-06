@@ -34,72 +34,9 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
 /**
- * Assuming all the setup/finding a server has been done, and the appropriate RegisteredPackage isn't checked out.
- * First scenario:
- * < You have a remote server to talk to (configureFromProperties)
- * < You have an existing Bifrost mapping (local location, remote location). (loadMappingInventory)
- * - You load both the existing and remote versions of the mappings. (initializeMapping)
- * - You connect to the server and get an updated version of the StoredMapping via a RegisteredPackage. (initializeMapping)
- * - You update your local files to match the updated stored mapping. (initializeMapping)
- * > You find a place for any new stored files to live.
- * > You update the version of your stored mapping.
- * - You start monitoring the locations for your selected mapping. (startMonitor)
- * > You ask the user what port they want to use.
- * > You notify the server that you're checking out the package and give your port.
- * x You play some game w-^_^-w
- * x You stop playing some game.
- * - You request that the monitors give you the changes to the files. (stopMonitor)
- * - You update your LocalMapping for those files you already have. (updateLocalMappingForChanges)
- * > You request user input on what to do with the files that are new. (updateLocalMappingForAdditions)
- * > You delete from the LocalMapping any files that were removed (pending user input). (updateLocalMappingForDeletions)
- * - You update the version of your LocalMapping. (persistLocalMappingChanges)
- * - You persist the updated LocalMapping to local storage. (persistLocalMappingChanges)
- * - You update the local version of the StoredFiles in memory. (persistLocalFileChangesToStore)
- * - You persist the updated StoredFiles to remote storage. (persistLocalFileChangesToStore)
- * > You let the user map any new files that are being stored.
- * - You upload the newly mapped stored files. (uploadStoredFiles)
- * - You update the local version of the StoredMapping with any new files and all the versions (including its own).(updateRemoteStoredMapping)
- * - You persist the updated StoredMapping into remote storage. (updateRemoteStoredMapping)
- * - You let the server know that you've checked in the RegisteredPackage with it's location. (checkinPackage)
- * - You correct any version problem on the server based on your in-memory version of the StoredMapping. (checkinPackage)
- * 
- * Second scenario:
- * < You have a remote server to talk to (configureFromProperties)
- * < You have an existing Bifrost mapping (local location, remote location). (loadMappingInventory)
- * * You want to start a upload a new game.
- * - You select the folders you want to monitor and get a comprehensive list of files. (recurseForFiles)
- * > You select the files you care about from the list.
- * - You pass the files and the directories to a new bifrost mapping. (createNewMapping)
- * - You create the associated local mapping, and add all the files to it setting versions to 0. (createNewMapping)
- * > You ask the user where they want to save the local mapping.
- * - You persist the local mapping to local storage. (persistLocalMappingChanges)
- * > You prompt the user for where they want to store the stored mapping.
- * - You update the bifrost wrapper with the stored location. (createNewStoredFiles)
- * > You present the user with the list of files to be stored (default to all in the same place as the mapping).
- * - You upload the local files to the remote location specified and update the stored mapping. (uploadStoredFiles)
- * - You call the wrapper to persist the mapping to the stored location. (updateRemoteStoredMapping)
- * - You register the new content in the server. (checkinPackage)
- * - You save the existing BifrostMappingInventory. (saveMappingInventory)
- * 
- * Third scenario:
- * < You have a remote server to talk to (configureFromProperties)
- * < You have an existing Bifrost mapping (local location, remote location). (loadMappingInventory)
- * * You want to download a new game from a remote location.
- * > You ask where you want to save the LocalMapping.
- * - You take the selected RegisteredPackage and location and use it to make a BifrostPersistenceWrapper with a stored mapping. (createNewMapping-2)
- * - You update the stored mapping. (createNewMapping-2)
- * - You create a map of StoredFiles to proposed local locations. (createNewLocalFiles)
- * > You let the user modify the list.
- * - You take the modified list and download all the files to the proposed locations, updating the LocalMapping. (downloadLocalFiles)
- * - You try to take a stab and figuring out where the monitors should go. (proposeMonitorLocations)
- * > You get user input on the the monitor locations.
- * - You save the monitor locations. (setMonitorLoations)
- * - You save the LocalMapping. (persistLocalMapping)
- * - You save the BifrostMappingInventory. (saveMappingInventory)
- * > You specify the port you want to use.
- * > You checkout the game you want, passing in your port.
- * x You play some game w-^_^-w
- * >> You continue as if you'd updated in scenario 1.
+ * Main class for the Bifrost stand-alone demo client.
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
  */
 public class Heimdall {
 	

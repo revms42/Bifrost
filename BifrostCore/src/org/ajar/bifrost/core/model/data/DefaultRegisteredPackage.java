@@ -2,6 +2,10 @@ package org.ajar.bifrost.core.model.data;
 
 import com.google.api.client.util.Key;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class DefaultRegisteredPackage implements RegisteredPackage {
 
 	@Key

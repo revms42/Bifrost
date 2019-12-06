@@ -1,5 +1,9 @@
 package org.ajar.bifrost.client.model;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class BifrostPersistenceMapping implements BifrostMapping {
 	
 	private String name;

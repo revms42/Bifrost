@@ -5,6 +5,10 @@ import java.util.List;
 
 import com.google.api.client.util.Key;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class PackageListResponse {
 
 	@Key

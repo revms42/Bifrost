@@ -16,6 +16,10 @@ import org.ajar.bifrost.client.ui.MappingElement.MappingDataChangeListener;
 import org.ajar.bifrost.core.model.call.PackageListResponse;
 import org.ajar.bifrost.core.model.call.PackageSummary;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class MappingListModel implements ListModel<MappingElement>, MappingDataChangeListener {
 	
 	private final ArrayList<MappingElement> list = new ArrayList<>();

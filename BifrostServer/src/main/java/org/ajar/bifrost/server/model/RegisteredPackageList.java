@@ -5,6 +5,10 @@ import java.util.List;
 
 import org.ajar.bifrost.core.model.data.DefaultRegisteredPackage;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class RegisteredPackageList {
 
 	private final List<DefaultRegisteredPackage> registered;

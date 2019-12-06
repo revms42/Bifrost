@@ -9,6 +9,10 @@ import org.ajar.bifrost.bind.BifrostPathConst;
 import org.ajar.bifrost.core.model.call.PackageListResponse;
 import org.ajar.bifrost.core.model.data.RegisteredPackage;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public interface BifrostClient extends BifrostPathConst {
 	
 	static Set<BifrostClient> INSTANCES = new HashSet<BifrostClient>();

@@ -1,5 +1,9 @@
 package org.ajar.bifrost.bind;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public interface BifrostPathConst {
 	public static final String LIST = "/list";
 	public static final String LIST_QUERY = "/query/list";

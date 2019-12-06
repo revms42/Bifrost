@@ -6,6 +6,9 @@ import junit.framework.TestSuite;
 
 /**
  * Unit test for simple App.
+ * 
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
  */
 public class HeimdallTest 
     extends TestCase

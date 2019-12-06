@@ -5,6 +5,10 @@ import javax.persistence.Id;
 
 import org.ajar.bifrost.core.model.data.RegisteredPackage;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 @Entity
 public class RegisteredPackageEntity implements RegisteredPackage {
 

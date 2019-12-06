@@ -33,6 +33,10 @@ import org.ajar.bifrost.client.comm.PersistenceClient;
 import org.ajar.bifrost.client.model.MappingInventory;
 import org.ajar.bifrost.client.ui.workflow.CreateNewUI;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class HeimdallBifrostClient extends JFrame {
 	private static final long serialVersionUID = -6168888185143776388L;
 	public static final JFileChooser chooser = new JFileChooser();

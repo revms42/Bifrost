@@ -39,6 +39,10 @@ import javax.swing.filechooser.FileFilter;
 import org.ajar.bifrost.client.ui.HeimdallBifrostClient;
 import org.ajar.bifrost.core.model.data.MappedFile;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class FileSelectionDialog {
 	
 	private static class MappingListItem<O extends MappedFile, F> {

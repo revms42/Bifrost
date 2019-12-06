@@ -10,6 +10,10 @@ import org.ajar.bifrost.client.model.BifrostPersistenceWrapper;
 import org.ajar.bifrost.core.model.data.PackageStatusDescription;
 import org.ajar.bifrost.core.model.data.RegisteredPackage;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class MappingElement implements Comparable<MappingElement> {
 	
 	public interface MappingDataChangeListener {

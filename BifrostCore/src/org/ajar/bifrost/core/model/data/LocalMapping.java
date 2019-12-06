@@ -2,6 +2,10 @@ package org.ajar.bifrost.core.model.data;
 
 import java.util.List;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class LocalMapping extends MappingPackage<LocalFile> {
 	
 	private List<String> monitorLocations;

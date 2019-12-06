@@ -22,6 +22,10 @@ import org.ajar.bifrost.core.model.data.LocalMapping;
 import org.ajar.bifrost.core.model.data.RegisteredPackage;
 import org.ajar.bifrost.core.model.data.StoredFile;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public abstract class AbstractCheckoutWorkflow implements CheckoutWorkflow {
 
 	protected final RegisteredPackage registeredPackage;

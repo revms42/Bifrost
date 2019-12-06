@@ -11,6 +11,10 @@ import org.ajar.bifrost.core.model.data.LocalFile;
 import org.ajar.bifrost.core.model.data.StoredFile;
 import org.ajar.bifrost.core.model.data.StoredMapping;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public abstract class AbstractCheckinWorkflow implements CheckinWorkflow {
     
     /**

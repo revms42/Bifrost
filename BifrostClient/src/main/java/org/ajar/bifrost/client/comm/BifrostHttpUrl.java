@@ -5,6 +5,10 @@ import org.ajar.bifrost.bind.BifrostPathConst;
 import com.google.api.client.http.GenericUrl;
 import com.google.api.client.util.Key;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public enum BifrostHttpUrl implements BifrostPathConst {
 	LIST(BifrostPathConst.LIST),
 	LIST_QUERY(BifrostPathConst.LIST_QUERY) {

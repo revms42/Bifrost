@@ -11,6 +11,10 @@ import org.ajar.bifrost.client.workflow.CheckoutNewPackage;
 import org.ajar.bifrost.core.model.data.RegisteredPackage;
 import org.ajar.bifrost.core.model.data.StoredFile;
 
+/**
+ * @author revms42
+ * @since 0.0.1-SNAPSHOT
+ */
 public class CheckOutNewUI extends CheckoutNewPackage {
 
 	public CheckOutNewUI(RegisteredPackage registeredPackage, File localMappingPath) throws IOException {
