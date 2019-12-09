@@ -44,3 +44,4 @@ Starting with the BifrostCore project import the projects from the file system (
 - [ ] Create a script for DwarfFortress as a client.
 - [ ] Investigate other games to integrate with Bifrost.
 - [ ] Create documentation for Bifrost development.
+- [ ] Optional encryption of data via a wrapper.
